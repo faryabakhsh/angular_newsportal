@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <h2>Business</h2>
+    </div>
+    <div class="row">
+
+        <!-- the use of *ngFor directive to to repeat a node for each item-->
+        <div *ngFor="let d of businessDisplay" class="col-md-4">
+            <div class="border border-info shadow p-3 mb-5 bg-white rounded">
+
+                <!-- interpolation-data binding --> 
+                <img class="card-img-top" src="{{d.urlToImage}}" alt="">
+
+                <div class="card-body">
+                    <h5 class="card-title">{{d.title}}</h5>
+
+                    <p class="card-text">{{d.content}}
+
+                        <a href="{{d.url}}" target=_blank>more details</a>
+                    </p>
+
+
+
+                    <p class="text-right blockquote-footer">{{d.author}} <cite
+                            title="Source Title">{{d.publishedAt}}</cite></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+<hr>
